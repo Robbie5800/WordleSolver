@@ -1,0 +1,55 @@
+/* 1. Correct the Google Font Import (Adding Libre Franklin) */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+
+.guess-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 30px;
+    font-weight: bold; /* Fixed from font-style */
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* 2. Parent container holding the 5 letter slots */
+.letters {
+    display: flex;
+    gap: 12px; /* Uniform spacing between your Wordle blocks */
+}
+
+/* 3. The container for ONE square and its 3 color buttons */
+.input-container {
+    position: relative; 
+    display: inline-block;
+    /* Remove the 100% width so it shrinks to fit the 75px square */
+}
+
+/* 4. The Wordle Square itself */
+.square-letter {
+    font-family: 'Libre Franklin', sans-serif;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    font-size: 48px; /* Slightly lowered from 68px so text doesn't overflow a 75px box */
+    font-weight: bold;
+    border: 2px solid #333;
+    border-radius: 0px; /* Removed rounded corners to match original Wordle 2D style */
+    box-sizing: border-box;
+    text-transform: uppercase;
+    
+
+    margin: 0; 
+}
+
+
+.green-button, .yellow-button, .grey-button {
+    position: absolute;
+    bottom: 80px; 
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.green-button { left: 10px; background-color: #6aaa64; }
+.yellow-button { left: 30px; background-color: #c9b458; }
+.grey-button { left: 50px; background-color: #787c7e; }

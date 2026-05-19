@@ -1,0 +1,14 @@
+# Python clutter
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+ENV/
+
+# OS clutter
+.DS_Store
+Thumbs.db

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <title>WordleSolver</title>
+</head>
+<body>
+    <div>
+        <img src="../static/images/solverLogo.jpg" alt="wordle solver logo" class="header logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%; size: 140%;">
+    </div>
+    <hr style="height: 10px; background-color: black;">
+  <div id="game-board">
+    <div class="row">
+        <p class="guess-title">Guess 1:</p><br>
+        <div class="letters">
+            <!-- Letter 1 -->
+            <div class="input-container">
+                <button class="green-button"></button>
+                <button class="yellow-button"></button>
+                <button class="grey-button"></button>
+                <input type="text" class="square-letter" maxlength="1" placeholder="A">
+            </div>
+    
+            <!-- Letter 2 -->
+            <div class="input-container">
+                <button class="green-button"></button>
+                <button class="yellow-button"></button>
+                <button class="grey-button"></button>
+                <input type="text" class="square-letter" maxlength="1" placeholder="B">
+            </div>
+    
+            <!-- Letter 3 -->
+            <div class="input-container">
+                <button class="green-button"></button>
+                <button class="yellow-button"></button>
+                <button class="grey-button"></button>
+                <input type="text" class="square-letter" maxlength="1" placeholder="C">
+            </div>
+    
+            <!-- Letter 4 -->
+            <div class="input-container">
+                <button class="green-button"></button>
+                <button class="yellow-button"></button>
+                <button class="grey-button"></button>
+                <input type="text" class="square-letter" maxlength="1" placeholder="D">
+            </div>
+    
+            <!-- Letter 5 -->
+            <div class="input-container">
+                <button class="green-button"></button>
+                <button class="yellow-button"></button>
+                <button class="grey-button"></button>
+                <input type="text" class="square-letter" maxlength="1" placeholder="E">
+            </div>
+        </div>
+    </div>
+  </div>
+    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+    
+    <!-- Submit Guess Button -->
+      <button onclick="submitGuess()" style="
+          font-family: 'Libre Franklin', sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          background-color: #6aaa64; /* Wordle Green */
+          color: white;
+          border: 2px solid #333;
+          padding: 12px 24px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: background-color 0.2s ease;
+      " 
+       onmouseover="this.style.backgroundColor='#5b9355'" 
+       onmouseout="this.style.backgroundColor='#6aaa64'">
+           Submit Guess
+       </button>
+    
+    </div>
+    <div id="suggestions-panel" style="text-align: center; font-family: 'Libre Franklin', sans-serif; margin: 20px auto; max-width: 450px;">
+        <h3 style="color: #333; margin-bottom: 10px; text-transform: uppercase; font-size: 16px; letter-spacing: 1px;">Top Recommended Next Words</h3>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <span id="rec-1" style="font-weight: bold; font-size: 20px; background-color: #f4f4f4; border: 2px solid #333; padding: 8px 16px; text-transform: uppercase; min-width: 80px;">-</span>
+            <span id="rec-2" style="font-weight: bold; font-size: 20px; background-color: #f4f4f4; border: 2px solid #ccc; padding: 8px 16px; text-transform: uppercase; min-width: 80px; color: #666;">-</span>
+            <span id="rec-3" style="font-weight: bold; font-size: 20px; background-color: #f4f4f4; border: 2px solid #ccc; padding: 8px 16px; text-transform: uppercase; min-width: 80px; color: #888;">-</span>
+        </div>
+        <p id="remaining-count" style="font-size: 13px; color: #666; margin-top: 10px;">Possible words remaining: All</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="addCourse()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Add Next Guess</button>
+    </div>
+
+
+    <script src="../static/js/app.js"></script>
+    
+</body>
+</html>
