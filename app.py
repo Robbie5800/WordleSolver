@@ -9,7 +9,7 @@ app = Flask(__name__)
 def wordlesolver():
     # Grabs the starting word recommendations directly from the module
     initial_suggestions = solver.pickTopThree(list(solver.INITIAL_GUESS_LIST))
-    return render_template("WordleSolver.html", starting_words=initial_suggestions)
+    return render_template("wordleSolver.html", starting_words=initial_suggestions)
 
 @app.route('/submit-guess', methods=['POST'])
 def handle_guess():
